@@ -1,0 +1,18 @@
+Customer Name,Project Name,Project Address,Project City,Project State,Project Zip,Project Start Date,Project Outstanding Debt,Project Commencement Date,Order Type
+Customer1,Project X,Project X Address,Giza,EG,11121,2018-12-01,4999.99,2019-01-01,Notice
+Customer2,Project Y,Project Y Address,Cairo,EG,11311,2018-03-01,3000,2018-02-15,Lien
+Invalid Customer,name,address,city,EE,11111,,500,2018-02-15,Lien
+Customer3,Project Z,Project Z Address,Giza,EG,11121,2018-05-01,,,Notice
+Customer2,Project Y,Project Y Address,Cairo,EG,11311,2018-03-01,5000,2018-02-25,Notice
+Customer2,Project T,Project T Address,Giza,EG,11121,2018-03-01,5000.2,2018-02-15,Notice
+Customer3,Project Z,Project Z Address,Giza,EG,11121,2018-05-01,,,Lien
+Customer4,Project A,Project A Address,Texas,TX,73301,2018-06-26,,2018-06-27,Notice
+Customer4,Project A,Project A Address,Texas,TX,73301,2018-06-26,,2018-06-27,Lien
+Invalid Customer2,name,,city,EE,11111,2018-03-01,500,2018-02-15,Lien
+Invalid Customer3,name,address,city,,11111,2018-03-01,500,2018-02-15,Lien
+Invalid Customer4,name,address,city,EE,,2018-03-01,500,2018-02-15,Lien
+Invalid Customer5,name,,,,,,,,
+Customer4,Project B,Project B Address,Texas,TX,73301,2018-06-26,7000,2018-06-27,Lien
+Customer1,Project C,Project X Address,Giza,EG,11121,2015-12-01,4999.99,2015-01-01,Notice
+Customer5,Project D,Project D Address,Texas,TX,73301,2018-06-26,7000,2018-11-09,Notice
+Customer5,Project D,Project D Address,Texas,TX,73301,2018-06-26,7000,2018-11-09,

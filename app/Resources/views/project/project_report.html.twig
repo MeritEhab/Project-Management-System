@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+{% block title %}Project Report{% endblock %}
+{% block body %}
+	<style>
+	table {
+	    font-family: arial, sans-serif;
+	    border-collapse: collapse;
+	    width: 100%;
+	}
+
+	td, th {
+	    border: 1px solid #dddddd;
+	    text-align: left;
+	    padding: 8px;
+	}
+
+	tr:nth-child(even) {
+	    background-color: #dddddd;
+	}
+	</style>
+	<a href="/home">Back To Home</a>
+	&nbsp;&nbsp;&nbsp;
+	<a href="javascript:history.back()">Back To Importing Details</a>
+
+	<h2>Project Reporet</h2> 
+	<hr>
+	{% if projects %}
+
+		<table >
+	    <thead>
+	      <tr>
+	        <th>Customer Name</th>
+	        <th>Project Name</th>
+	        <th>Order Type</th>
+	        <th>Order Deadline</th>
+
+	      </tr>
+	    </thead>
+	    <tbody>
+	    {% for project in projects%}
+	      <tr>
+	        <td>{{project.customerName}}</td>
+	        <td>{{project.projectName}}</td>
+	        <td>{{project.type}}</td>
+	        <td>{{project.deadline | date('F j, Y, g:i a')}}</td>
+
+	      </tr>
+	    {% endfor %}
+	    </tbody>
+	  </table>
+	{% else %}
+		<p> Your submitted file has some invalid data as there is no information to display</p>
+	{% endif %}
+	
+{% endblock %}

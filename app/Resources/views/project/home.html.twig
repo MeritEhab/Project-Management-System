@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home{% endblock %}
+{% block body %}
+	<h2>{{dispaly_text}}</h2>
+	<br> <p> Please uploud your file here</p>
+	<hr>
+
+<form action='/display' method='post' enctype="multipart/form-data">
+        Import File : <input type='file' name='sel_file' size='20'>
+        <br><br><input type='submit' name='submit' value='Upload'>
+    </form>
+	
+{% endblock %}

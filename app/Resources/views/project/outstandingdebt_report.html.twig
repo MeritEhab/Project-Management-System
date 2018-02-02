@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+{% block title %}Outstanding Debt Report{% endblock %}
+{% block body %}
+	<style>
+	table {
+	    font-family: arial, sans-serif;
+	    border-collapse: collapse;
+	    width: 100%;
+	}
+
+	td, th {
+	    border: 1px solid #dddddd;
+	    text-align: left;
+	    padding: 8px;
+	}
+
+	tr:nth-child(even) {
+	    background-color: #dddddd;
+	}
+	</style>
+	<a href="/home">Back To Home</a> 
+	&nbsp;&nbsp;
+	<a href="javascript:history.back()">Back To Importing Details</a>
+
+	<h2>Outstanding Debt Reporet</h2>
+	<hr>
+	{% if result1 %}
+
+		<table >
+	    <thead>
+	      <tr>
+	        <th>Customer Name</th>
+	        <th>Total Number of Projects</th>
+	        <th>Total Outstanding Debt</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	    {% for result in result1%}
+	      <tr>
+	        <td>{{result.customerName}}</td>
+	        <td>{{result.numOfProjects}}</td>
+	        {%if result.totalDebt%}
+	        	<td>{{result.totalDebt}}</td>
+	        {% else %}
+	        	<td>0</td>
+	        {% endif %}
+	      </tr>
+	    {% endfor %}
+	    </tbody>
+	  </table>
+	{% else %}
+		<p> No Information to display</p>
+	{% endif%}
+	<hr  size="20" noshade>
+	{% if result2 %}
+
+		<table >
+	    <thead>
+	      <tr>
+	        <th>Customer Name</th>
+	        <th>Total Number of Orders</th>
+
+	      </tr>
+	    </thead>
+	    <tbody>
+	    {% for result in result2%}
+	      <tr>
+	        <td>{{result.customerName}}</td>
+	        <td>{{result.numOfOrders}}</td>
+	      </tr>
+	    {% endfor %}
+	    </tbody>
+	  </table>
+	{% else %}
+		<p> No information to display</p>
+	{% endif %}
+	
+{% endblock %}
